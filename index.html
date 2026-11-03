@@ -1,0 +1,487 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CyberShield - Cyber Security</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#07111f;
+    color:white;
+}
+
+/* NAVBAR */
+nav{
+    background:#020812;
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:27px;
+    font-weight:bold;
+    color:#00eaff;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:16px;
+}
+
+nav ul li a:hover{
+    color:#00eaff;
+}
+
+/* HERO */
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:50px 20px;
+    background:
+    linear-gradient(rgba(3,12,25,.85),rgba(3,12,25,.95)),
+    radial-gradient(circle,#063b50,#07111f 60%);
+}
+
+.hero h1{
+    font-size:60px;
+    color:#00eaff;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:750px;
+    margin:auto;
+    font-size:19px;
+    line-height:1.7;
+    color:#d8e7ef;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:14px 30px;
+    background:#00eaff;
+    color:#001018;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+.btn:hover{
+    background:white;
+}
+
+/* SECTIONS */
+section{
+    padding:70px 8%;
+}
+
+.title{
+    text-align:center;
+    font-size:38px;
+    color:#00eaff;
+    margin-bottom:45px;
+}
+
+/* CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#0c1b2d;
+    padding:30px;
+    border-radius:15px;
+    border:1px solid #153b52;
+    text-align:center;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#00eaff;
+    box-shadow:0 0 20px rgba(0,234,255,.2);
+}
+
+.icon{
+    font-size:45px;
+    margin-bottom:18px;
+}
+
+.card h3{
+    color:#00eaff;
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#c7d5df;
+    line-height:1.6;
+}
+
+/* ABOUT */
+.about{
+    background:#091725;
+}
+
+.about-box{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+}
+
+.about-box p{
+    line-height:1.8;
+    color:#c9d6df;
+    font-size:17px;
+}
+
+/* TIPS */
+.tips{
+    max-width:900px;
+    margin:auto;
+}
+
+.tip{
+    background:#0c1b2d;
+    margin:15px 0;
+    padding:18px 25px;
+    border-left:4px solid #00eaff;
+    border-radius:8px;
+}
+
+.tip b{
+    color:#00eaff;
+}
+
+/* CHECKER */
+.checker{
+    text-align:center;
+    background:#020b15;
+}
+
+input{
+    width:80%;
+    max-width:500px;
+    padding:15px;
+    border:none;
+    border-radius:8px;
+    margin-top:15px;
+    outline:none;
+}
+
+.check-btn{
+    padding:15px 25px;
+    border:none;
+    background:#00eaff;
+    margin-left:5px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+#result{
+    margin-top:20px;
+    font-size:18px;
+}
+
+/* CONTACT */
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:12px;
+    color:#c9d6df;
+}
+
+/* FOOTER */
+footer{
+    background:#020812;
+    text-align:center;
+    padding:25px;
+    color:#9db0bd;
+}
+
+footer span{
+    color:#00eaff;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        gap:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    input{
+        width:100%;
+    }
+
+    .check-btn{
+        margin-top:10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="logo">🛡️ CyberShield</div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#threats">Threats</a></li>
+        <li><a href="#tips">Safety Tips</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+
+<!-- HOME -->
+<section class="hero" id="home">
+
+    <div>
+        <h1>CYBER SECURITY</h1>
+
+        <p>
+            Protect your digital world from cyber threats.
+            Learn how to stay safe from hackers, phishing,
+            malware, data theft and online scams.
+        </p>
+
+        <a href="#threats" class="btn">Explore Security</a>
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+    <h2 class="title">What is Cyber Security?</h2>
+
+    <div class="about-box">
+
+        <p>
+            Cyber Security is the practice of protecting computers,
+            mobile phones, networks, applications and personal data
+            from unauthorized access and cyber attacks.
+            Strong passwords, software updates, safe browsing habits
+            and awareness can help reduce online risks.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- THREATS -->
+<section id="threats">
+
+    <h2 class="title">Common Cyber Threats</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">🎣</div>
+            <h3>Phishing</h3>
+            <p>
+                Fake emails, messages or websites designed
+                to trick users into revealing sensitive information.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🦠</div>
+            <h3>Malware</h3>
+            <p>
+                Malicious software that can damage devices
+                or steal information.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🔐</div>
+            <h3>Password Attacks</h3>
+            <p>
+                Attackers may try to guess or obtain weak passwords.
+                Use unique and strong passwords.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">💳</div>
+            <h3>Online Scams</h3>
+            <p>
+                Fraudulent offers, messages and websites
+                that attempt to steal money or information.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SAFETY TIPS -->
+<section id="tips" class="about">
+
+    <h2 class="title">Cyber Safety Tips</h2>
+
+    <div class="tips">
+
+        <div class="tip">
+            <b>01. Strong Password:</b>
+            Use long, unique passwords for important accounts.
+        </div>
+
+        <div class="tip">
+            <b>02. Two-Factor Authentication:</b>
+            Enable 2FA whenever it is available.
+        </div>
+
+        <div class="tip">
+            <b>03. Avoid Suspicious Links:</b>
+            Do not click unknown links or download unexpected files.
+        </div>
+
+        <div class="tip">
+            <b>04. Update Software:</b>
+            Keep your operating system and applications updated.
+        </div>
+
+        <div class="tip">
+            <b>05. Protect Personal Information:</b>
+            Do not share passwords, OTPs or sensitive information.
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PASSWORD CHECKER -->
+<section class="checker">
+
+    <h2 class="title">Password Strength Checker</h2>
+
+    <p>Enter a sample password to check its basic strength.</p>
+
+    <input type="password" id="password" placeholder="Enter password">
+
+    <button class="check-btn" onclick="checkPassword()">
+        Check
+    </button>
+
+    <div id="result"></div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+
+    <h2 class="title">Cyber Security Awareness</h2>
+
+    <p>🛡️ Stay Alert</p>
+    <p>🔐 Protect Your Data</p>
+    <p>🌐 Browse Safely</p>
+    <p>📱 Secure Your Devices</p>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+    © 2026 <span>CyberShield</span> | Cyber Security Awareness Website
+</footer>
+
+
+<script>
+
+function checkPassword(){
+
+    let password =
+        document.getElementById("password").value;
+
+    let result =
+        document.getElementById("result");
+
+    if(password.length === 0){
+
+        result.innerHTML =
+        "⚠️ Please enter a password.";
+
+    }
+
+    else if(password.length < 6){
+
+        result.innerHTML =
+        "🔴 Weak Password";
+
+    }
+
+    else if(password.length < 10){
+
+        result.innerHTML =
+        "🟠 Medium Password";
+
+    }
+
+    else{
+
+        result.innerHTML =
+        "🟢 Strong Password";
+    }
+}
+
+</script>
+
+</body>
+</html>
+```
